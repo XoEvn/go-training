@@ -16,4 +16,5 @@ func reverse(head *ListNode)(*ListNode){
 	return last
 }
 
-
+// https://labuladong.gitee.io/algo/      算法
+// https://lailin.xyz/post/singleton.html go设计模式
