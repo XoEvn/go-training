@@ -1,4 +1,4 @@
-package training
+package test
 
 import (
 	"encoding/json"
@@ -15,19 +15,18 @@ type StuRead struct {
 	Test  interface{}
 }
 
-
-func Test02(t *testing.T){
-	data:="{\"name\":\"张三\",\"Age\":18,\"high\":true,\"sex\":\"男\",\"CLASS\":{\"naME\":\"1班\",\"GradE\":3}}"
-	str:=[]byte(data)
+func Test02(t *testing.T) {
+	data := "{\"name\":\"张三\",\"Age\":18,\"high\":true,\"sex\":\"男\",\"CLASS\":{\"naME\":\"1班\",\"GradE\":3}}"
+	str := []byte(data)
 
 	//1.Unmarshal的第一个参数是json字符串，第二个参数是接受json解析的数据结构。
 	//第二个参数必须是指针，否则无法接收解析的数据，如stu仍为空对象StuRead{}
 	//2.可以直接stu:=new(StuRead),此时的stu自身就是指针
-	stu:=StuRead{}
-	err:=json.Unmarshal(str,&stu)
+	stu := StuRead{}
+	err := json.Unmarshal(str, &stu)
 
 	//解析失败会报错，如json字符串格式不对，缺"号，缺}等。
-	if err!=nil{
+	if err != nil {
 		fmt.Println(err)
 	}
 

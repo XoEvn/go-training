@@ -1,4 +1,4 @@
-package training
+package test
 
 import (
 	"fmt"
@@ -6,8 +6,7 @@ import (
 	"testing"
 )
 
-func TestCover(t *testing.T){
-
+func TestCover(t *testing.T) {
 
 	fmt.Printf("%.2f\n", math.Trunc(math.Pi))
 	fmt.Printf("%.2f\n", math.Trunc(-1.9345))

@@ -1,4 +1,4 @@
-package training
+package test
 
 import (
 	"encoding/json"
@@ -7,33 +7,32 @@ import (
 )
 
 type Stu struct {
-	Name string `json:"name"`
-	Age int
-	HIgh bool
-	sex string
+	Name  string `json:"name"`
+	Age   int
+	HIgh  bool
+	sex   string
 	Class *Class `json:"class"`
 }
 
 type Class struct {
-	Name string
+	Name  string
 	Grade int
 }
 
-
-func Test01(t *testing.T){
+func Test01(t *testing.T) {
 	stu := Stu{
 		Name: "张三",
-		Age :18,
+		Age:  18,
 		HIgh: true,
-		sex: "男",
+		sex:  "男",
 	}
 
-	cla :=new(Class)
+	cla := new(Class)
 	cla.Name = "1班"
 	cla.Grade = 3
-	stu.Class=cla
-	jsonStu,err :=json.Marshal(stu)
-	if err!=nil {
+	stu.Class = cla
+	jsonStu, err := json.Marshal(stu)
+	if err != nil {
 		fmt.Println("生成json字符串错误")
 	}
 
