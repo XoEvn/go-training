@@ -7,6 +7,14 @@ import (
 type Shape interface {
 	Area() float64
 }
+type Triangle struct {
+	Base   float64
+	Height float64
+}
+
+func (r Triangle) Area() float64 {
+	return (r.Base * r.Height) * 0.5
+}
 
 type Rectangle struct {
 	Width  float64
