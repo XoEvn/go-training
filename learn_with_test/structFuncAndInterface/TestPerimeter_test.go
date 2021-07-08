@@ -6,23 +6,25 @@ import (
 
 func TestArea(t *testing.T) {
 	areaTests := []struct {
+		name  string
 		shape Shape
 		want  float64
 	}{
-		{
+		{name: "Rectangel",
 			shape: Rectangle{
 				Width:  12,
 				Height: 6,
 			},
 			want: 72.0,
 		},
-		{
+		{name: "Circle",
 			shape: Circle{
 				Radius: 10,
 			},
 			want: 314.1592653589793,
 		},
 		{
+			name: "triangle",
 			shape: Triangle{
 				Base:   12,
 				Height: 6,
